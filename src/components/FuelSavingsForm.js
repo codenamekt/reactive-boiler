@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Button, IconButton} from 'react-toolbox/lib/button';
 import FuelSavingsResults from './FuelSavingsResults';
 import FuelSavingsTextInput from './FuelSavingsTextInput';
 
@@ -55,7 +56,7 @@ const FuelSavingsForm = ({saveFuelSavings, calculateFuelSavings, appState}) => {
       <hr/>
 
       {appState.necessaryDataIsProvidedToCalculateSavings && <FuelSavingsResults savings={appState.savings}/>}
-      <input type="submit" value="Save" onClick={() => saveFuelSavings(appState)}/>
+      <Button type="submit" value="Save" label="Save" raised primary onClick={() => saveFuelSavings(appState)} />
     </div>
   );
 };

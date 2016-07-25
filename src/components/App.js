@@ -1,13 +1,19 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
+import { AppBar, Layout, NavDrawer, Panel, Sidebar } from 'react-toolbox';
 
 const App = (props) => {
   return (
-    <div>
-      <IndexLink to="/">Home</IndexLink> | <Link to="/About">About</Link>
-      <br/>
-      {props.children}
-    </div>
+    <Layout>
+      <Panel>
+        <AppBar fixed flat>
+          <IndexLink to="/">Home</IndexLink> | <Link to="/About">About</Link>
+        </AppBar>
+        <div style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
+          {props.children}
+        </div>
+      </Panel>
+    </Layout>
   );
 };
 
