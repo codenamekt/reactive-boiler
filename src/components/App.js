@@ -7,7 +7,11 @@ const App = (props) => {
     <Layout>
       <Panel>
         <AppBar fixed flat>
-          <IndexLink to="/">Home</IndexLink> | <Link to="/About">About</Link>
+          <IndexLink to="/">Home</IndexLink>
+          {' | '}
+          <Link to="/fuel-savings">Demo App</Link>
+          {' | '}
+          <Link to="/About">About</Link>
         </AppBar>
         <div style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
           {props.children}
