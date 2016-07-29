@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
-import { AppBar, Layout, NavDrawer, Panel, Sidebar } from 'react-toolbox';
+import { AppBar, Layout, Panel} from 'react-toolbox';
 
 const App = (props) => {
   return (
     <Layout>
       <Panel>
-        <AppBar fixed flat>
+        <AppBar>
           <IndexLink to="/">Home</IndexLink>
           {' | '}
           <Link to="/fuel-savings">Demo App</Link>
