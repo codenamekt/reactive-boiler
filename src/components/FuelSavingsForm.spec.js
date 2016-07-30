@@ -168,7 +168,7 @@ describe('<FuelSavingsForm />', () => {
     />);
 
     expect(saveFuelSavings.calledOnce).to.be.false;
-    wrapper.find('input[type="submit"]').simulate('click');
+    wrapper.find('[type="submit"]').simulate('click');
     expect(saveFuelSavings.calledOnce).to.be.true;
   });
 
@@ -198,7 +198,7 @@ describe('<FuelSavingsForm />', () => {
       fuelSavings={fuelSavings}
     />);
 
-    wrapper.find('input[type="submit"]').simulate('click');
+    wrapper.find('[type="submit"]').simulate('click');
     expect(saveFuelSavings.args[0][0]).to.equal(fuelSavings);
   });
 
